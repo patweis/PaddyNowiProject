@@ -7,7 +7,7 @@ import NavigationBar from '@/components/NavigationBar.vue';
 <template>
   <main>
     <NavigationBar></NavigationBar>
-    <HomePage></HomePage>
+     <HomePage></HomePage>
     <FooterLine></FooterLine>
   </main>
 </template>

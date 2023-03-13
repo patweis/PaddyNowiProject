@@ -5,6 +5,9 @@
         <img src="../assets/Logo/brantl_logo.png" alt="Logo">
       </div>
     </div>
+    <div class="navbar-dropdown-icon col-md-6">
+      <span class="far fa-bars"></span>
+    </div>
     <div class="navbar-menu col-md-6">
       <div class="navbar-item col-md-2">
         <div class="navbar-item-header"><router-link to="/aboutus">Über uns</router-link></div>
@@ -12,11 +15,11 @@
       <div class="navbar-item col-md-2">
         <div class="navbar-item-header"><router-link to="/achievements">Leistungen</router-link></div>
         <div class="navbar-item-childs">
-          <div class="navbar-child-item noborder"><router-link  to="/achievements/earthworks">Erdbau</router-link></div>
-          <div class="navbar-child-item"><router-link  to="/achievements/construction">Leistungsbau</router-link></div>
-          <div class="navbar-child-item"><router-link  to="/achievements/blasting">Sprengarbeiten</router-link></div>
-          <div class="navbar-child-item"><router-link  to="/achievements/recycling">Baustoffrecycling</router-link></div>
-          <div class="navbar-child-item"><router-link  to="/achievements/fleet">Fuhrpark</router-link></div>
+          <div class="navbar-child-item noborder"><router-link to="/achievements/earthworks">Erdbau</router-link></div>
+          <div class="navbar-child-item"><router-link to="/achievements/construction">Leistungsbau</router-link></div>
+          <div class="navbar-child-item"><router-link to="/achievements/blasting">Sprengarbeiten</router-link></div>
+          <div class="navbar-child-item"><router-link to="/achievements/recycling">Baustoffrecycling</router-link></div>
+          <div class="navbar-child-item"><router-link to="/achievements/fleet">Fuhrpark</router-link></div>
         </div>
       </div>
       <div class="navbar-item col-md-2">
@@ -36,14 +39,30 @@
 </template>
 
 <style lang="scss" scoped>
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none !important;
+  }
+
+  .navbar {
+    position: relative !important;
+    display: block !important;
+  }
+
+  nav {
+    width: 100%;
+  }
+}
 
 a {
-  color:var(--p-dark-gray);
+  color: var(--p-dark-gray);
   font-weight: bold;
 }
+
 a:hover {
-   color:var(--p-dark-red);
-  }
+  color: var(--p-dark-red);
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -56,62 +75,65 @@ a:hover {
   overflow: hidden;
   white-space: nowrap;
 }
+
 .navbar-brand {
   display: block;
-  float:left;
+  float: left;
+  img {
+    height: 7.0em;
+    padding: 0.2em;
+  }
+}
+.navbar-menu{
+  padding: 2em 0;
 }
 
-.navbar-brand img {
-  height: 7.0rem;
-  padding: 0.2rem;
-}
-
-.navbar-menu {
-  display: block;
-  text-align: center;
-  padding: 2rem 0;
-  font-size: 19px;
-  font-weight: 400;
-}
-
-.navbar-item{
-  &:hover{
-    .navbar-item-header a{
-      color:  var( --p-dark-red);
-      font-size: 105%;
+.navbar-item {
+  a{
+    font-size: 110%;
+  }
+  &:hover {
+    .navbar-item-header a {
+      color: var(--p-dark-red);
+      font-size: 115%;
     }
-    .navbar-item-childs{
+
+    .navbar-item-childs {
       display: block !important;
-      
+
     }
   }
 }
 
-.navbar-item-childs{
+.navbar-item-childs {
   display: none;
   position: fixed;
   min-width: 8.33333%;
   transition: transform 1s;
   padding: 0 20px;
   margin-left: -20px;
-  background-color: var( --p-dark-red);
+  background-color: var(--p-dark-red);
+  border-radius: 3px;
 }
 
-.navbar-child-item{
+.navbar-child-item {
   width: 100%;
   text-align: left;
   padding: 10px;
   border-top: 1px solid white;
-  a{
-    color:white;
+
+  a {
+    color: white;
   }
-  &:hover{
-    a{
-      color:var(--p-dark-gray);
+
+  &:hover {
+    a {
+      color: var(--p-light-gray);
     }
   }
 }
-.navbar-item-header{
+
+.navbar-item-header {
   height: 3rem;
   width: 100%;
   text-align: center;
@@ -119,7 +141,6 @@ a:hover {
   padding: 10px;
 }
 
-.noborder{
-  border:none;
-}
-</style>
+.noborder {
+  border: none;
+}</style>
