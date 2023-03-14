@@ -1,8 +1,9 @@
 <template>
+  <div class="navbar_space col-md-12"></div>
   <nav class="navbar">
     <div class="navbar-brand col-md-6">
       <div>
-        <img src="../assets/Logo/brantl_logo.png" alt="Logo">
+        <a href="/"><img src="../assets/Logo/brantl_logo.png" alt="Logo"></a>
       </div>
     </div>
     <div class="navbar-dropdown-icon col-md-6">
@@ -15,11 +16,11 @@
       <div class="navbar-item col-md-2">
         <div class="navbar-item-header"><router-link to="/achievements">Leistungen</router-link></div>
         <div class="navbar-item-childs">
-          <div class="navbar-child-item noborder"><router-link to="/achievements/earthworks">Erdbau</router-link></div>
-          <div class="navbar-child-item"><router-link to="/achievements/construction">Leistungsbau</router-link></div>
-          <div class="navbar-child-item"><router-link to="/achievements/blasting">Sprengarbeiten</router-link></div>
-          <div class="navbar-child-item"><router-link to="/achievements/recycling">Baustoffrecycling</router-link></div>
-          <div class="navbar-child-item"><router-link to="/achievements/fleet">Fuhrpark</router-link></div>
+          <div class="navbar-child-item noborder"><router-link to="/achievements#earthworks">Erdbau</router-link></div>
+          <div class="navbar-child-item"><router-link to="/achievements#construction">Leistungsbau</router-link></div>
+          <div class="navbar-child-item"><router-link to="/achievements#blasting">Sprengarbeiten</router-link></div>
+          <div class="navbar-child-item"><router-link to="/achievements#recycling">Baustoffrecycling</router-link></div>
+          <div class="navbar-child-item"><router-link to="/achievements#fleet">Fuhrpark</router-link></div>
         </div>
       </div>
       <div class="navbar-item col-md-2">
@@ -48,12 +49,24 @@
     position: relative !important;
     display: block !important;
   }
+  .navbar_space{
+    height: 0em;
+  }
+  .navbar-dropdown-icon{
+    display: block;
+  }
 
   nav {
     width: 100%;
   }
 }
+.navbar-dropdown-icon{
+    display: none;
+  }
 
+ .navbar_space{
+    height: 7em;
+  }
 a {
   color: var(--p-dark-gray);
   font-weight: bold;
@@ -144,3 +157,4 @@ a:hover {
 .noborder {
   border: none;
 }</style>
+
